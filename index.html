@@ -1,0 +1,946 @@
+<!-- ThinkPlus - EdTech Website (HTML, CSS, Bootstrap, JS) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThinkPlus Education</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+     body { font-family: 'Poppins', sans-serif; }
+    /* .hero { background: linear-gradient(to right, #000000, #111111, #222222); color: #fff; padding: 100px 0; } */
+    /* .hero h1 span { color: #ffc107; } */
+    /* /* .navbar-brand { font-weight: 600; }  */
+     .course-card { transition: transform 0.3s; }
+    .course-card:hover { transform: translateY(-5px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    footer { background: #000; color: #ccc; padding: 50px 0; }
+    footer a { color: #ffc107; text-decoration: none; } 
+
+
+    .navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link {
+  color: #ccc !important;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+  transform: translateY(-2px);
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+.btn-warning:hover {
+  background-color: #ffb300;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+
+
+
+#services {
+  padding: 60px 0;
+}
+
+.service-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.service-heading {
+  font-weight: 700;
+}
+
+.service-subtitle {
+  color: #6c757d;
+}
+
+.services-scroll-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.left-btn {
+  left: -10px;
+}
+
+.right-btn {
+  right: -10px;
+}
+
+.services-scroll {
+  scroll-behavior: smooth;
+}
+
+.services-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for a clean look */
+}
+
+
+
+
+#stats {
+  background-color: #0d0b25; /* dark blue/purple tone */
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon i {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  padding: 10px 12px;
+}
+
+
+
+#testimonials {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.testimonial-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: scrollInfinite 40s linear infinite;
+}
+
+.testimonial-card {
+  background-color: #0d0b25;
+  flex: 0 0 auto;
+  width: 350px;
+  min-height: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #dcdcdc;
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+#hero {
+  background-color: #fff;
+}
+
+#hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+.btn-warning {
+  background-color: #ffc107 !important;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #ffc107 !important;
+  transform: scale(1.03);
+}
+
+.input-group-text {
+  background-color: #fff;
+  border-right: none;
+}
+
+.form-control {
+  border-left: none;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.1rem;
+  }
+}
+
+
+
+.brand-logo {
+  max-height: 70px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+
+#better .border {
+  border: 1px solid #eee !important;
+}
+
+#better .p-4:hover {
+  border-color: #ffc107 !important;
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.1);
+  
+}
+
+
+/* GALLERY STYLING */
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 193, 7, 0.8); /* Bootstrap warning color (yellow tone) */
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+#gallery h2 span {
+  color: #ffc107; /* yellow highlight */
+}
+
+
+
+#about {
+  position: relative;
+  
+}
+
+#about h2 span {
+  color: #ffc107; /* yellow accent */
+}
+
+.about-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.founder img {
+  object-fit: cover;
+  border: 3px solid #ffc107;
+  transition: transform 0.3s ease;
+}
+
+.founder img:hover {
+  transform: scale(1.05);
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold text-warning" href="#hero">
+      <i class="bi bi-lightbulb me-2"></i>ThinkPlus
+    </a>
+
+    <!-- Toggle Button -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link px-3 active" href="#hero">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#contact">Contact</a>
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn-warning fw-semibold ms-lg-4 px-4 py-2">
+        Enroll Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+ <section id="hero" class="py-5">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      
+      <!-- Left Content -->
+      <div class="col-lg-6 text-start">
+        <h1 class="fw-bold mb-3">
+          Discover. <span class="text-dark">Prepare.</span> 
+          <span class="text-warning">Succeed.</span>
+        </h1>
+        <h4 class="fw-semibold mb-3">
+          Ready to crack India’s top entrance exams?
+        </h4>
+        <p class="text-secondary mb-4">
+          We offer premier coaching for <strong>CLAT, Judiciary, IPMAT, CAT, CUET, NIFT, NID</strong> and other competitive exams, 
+          leading to diverse careers beyond medicine and engineering.
+        </p>
+
+        <!-- Phone Input -->
+        <div class="mb-2">
+          <div class="input-group">
+            <span class="input-group-text">
+              🇮🇳 +91
+            </span>
+            <input type="text" class="form-control" placeholder="Enter phone number">
+          </div>
+          <small class="text-muted">We will send an OTP for verification</small>
+        </div>
+
+        <!-- Button -->
+        <button class="btn btn-warning text-white fw-bold w-100 mt-3" id="joinBtn">
+          Join for free ➜
+        </button>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-5 text-center mt-5 mt-lg-0">
+        <img src="images/graduation.png" alt="Success illustration" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Courses Section -->
+  <!-- <section id="courses" class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Popular Courses</h2>
+        <select class="form-select w-auto">
+          <option>All</option>
+          <option>MBA Prep</option>
+          <option>Aptitude</option>
+        </select>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card course-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">MBA Entrance Crash Course</h5>
+              <p class="card-text text-muted">Focused CAT & MBA prep with live doubt sessions.</p>
+              <p><strong>Duration:</strong> 12 weeks</p>
+              <p><strong>Price:</strong> ₹9,999</p>
+              <a href="#contact" class="btn btn-dark">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Aptitude Booster</h5>
+              <p class="card-text text-muted">Quant and DI fundamentals with daily practice.</p>
+              <p><strong>Duration:</strong> 6 weeks</p>
+              <p><strong>Price:</strong> ₹4,999</p>
+              <a href="#contact" class="btn btn-dark">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card course-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Verbal Mastery</h5>
+              <p class="card-text text-muted">Reading comprehension, grammar & strategy.</p>
+              <p><strong>Duration:</strong> 8 weeks</p>
+              <p><strong>Price:</strong> ₹5,499</p>
+              <a href="#contact" class="btn btn-dark">Enroll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+    <!-- Services Section -->
+<section id="services" class="text-center">
+  <div class="container position-relative">
+    <h2 class="fw-bold mb-3">Our Services</h2>
+    <p class="text-muted mb-5">
+      Start your IPMAT, CAT, and CLAT preparation with Thinkplus Education. Our specially curated courses are crafted by IIM grads and expert faculty.
+    </p>
+
+    <div class="services-scroll-wrapper position-relative">
+      <!-- Left Scroll Button -->
+      <button class="scroll-btn left-btn btn btn-light shadow d-flex align-items-center justify-content-center">
+        <i class="bi bi-chevron-left fs-4"></i>
+      </button>
+
+      <!-- Scrollable Cards -->
+      <div class="services-scroll d-flex overflow-auto px-3">
+        <!-- CAT -->
+        <div class="card service-card flex-shrink-0 mx-2" style="width: 18rem;">
+          <img src="images/CAT.png" class="card-img-top" alt="CAT">
+          <div class="card-body">
+            <h5 class="service-heading text-success">CAT</h5>
+            <p class="service-subtitle">Gateway to management careers</p>
+            <p class="card-text">
+              The CAT program helps students to get a boost in their CAT preparation journey. The course is designed in a stepwise manner.
+            </p>
+          </div>
+        </div>
+
+        <!-- IPMAT -->
+        <div class="card service-card flex-shrink-0 mx-2" style="width: 18rem;">
+          <img src="images/ipmat.png" class="card-img-top" alt="IPMAT">
+          <div class="card-body">
+            <h5 class="service-heading text-primary">IPMAT</h5>
+            <p class="service-subtitle">Headstart to management careers</p>
+            <p class="card-text">
+              Thinkplus Education offers a unique and personalized course curriculum for IPMAT, shaping well-rounded students with rigor.
+            </p>
+          </div>
+        </div>
+
+        <!-- CLAT -->
+        <div class="card service-card flex-shrink-0 mx-2" style="width: 18rem;">
+          <img src="images/CLAT.png" class="card-img-top" alt="CLAT">
+          <div class="card-body">
+            <h5 class="service-heading text-danger">CLAT</h5>
+            <p class="service-subtitle">Oriented programs</p>
+            <p class="card-text">
+              Thinkplus’ CLAT program assists students in preparing for the CLAT exam and pursuing a career in Law after school.
+            </p>
+          </div>
+        </div>
+
+        <!-- IQ PLUS -->
+        <div class="card service-card flex-shrink-0 mx-2" style="width: 18rem;">
+          <img src="images/IQPLUS.png" class="card-img-top" alt="IQ+">
+          <div class="card-body">
+            <h5 class="service-heading text-info">IQ PLUS</h5>
+            <p class="service-subtitle">Build your IQ</p>
+            <p class="card-text">
+              Looking to give your child an advantage in today's competitive world? Look no further than Thinkplus IQ+.
+            </p>
+          </div>
+        </div>
+
+        <!-- Career Counselling -->
+        <div class="card service-card flex-shrink-0 mx-2" style="width: 18rem;">
+          <img src="images/Career.png" class="card-img-top" alt="Career Counselling">
+          <div class="card-body">
+            <h5 class="service-heading text-warning">Career Counselling</h5>
+            <p class="service-subtitle">Plan your future with experts</p>
+            <p class="card-text">
+              Feeling uncertain about your career path? Get expert guidance and discover your best-fit career with Thinkplus Counselling.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Scroll Button -->
+      <button class="scroll-btn right-btn btn btn-light shadow d-flex align-items-center justify-content-center">
+        <i class="bi bi-chevron-right fs-4"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="stats" class="py-5 text-center text-white">
+  <div class="container">
+    <h2 class="fw-bold mb-5">
+      Start your prep the <span class="text-warning">THINKPLUS</span> way
+    </h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Stat 1 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-card bg-white text-dark p-4 rounded-4 shadow-sm">
+          <div class="icon mb-3">
+            <i class="bi bi-stars text-primary fs-2"></i>
+          </div>
+          <h3 class="fw-bold mb-1">400+</h3>
+          <p class="text-muted mb-0">Our Happy Students</p>
+        </div>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-card bg-white text-dark p-4 rounded-4 shadow-sm">
+          <div class="icon mb-3">
+            <i class="bi bi-journal-text text-danger fs-2"></i>
+          </div>
+          <h3 class="fw-bold mb-1">600</h3>
+          <p class="fw-semibold text-muted mb-0">Hrs</p>
+          <p class="text-muted">Dedicated Lectures</p>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-card bg-white text-dark p-4 rounded-4 shadow-sm">
+          <div class="icon mb-3">
+            <i class="bi bi-people text-info fs-2"></i>
+          </div>
+          <h3 class="fw-bold mb-1">10+</h3>
+          <p class="fw-semibold text-muted mb-0">Yrs</p>
+          <p class="text-muted">Experienced Faculty</p>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="col-6 col-md-3">
+        <div class="stat-card bg-white text-dark p-4 rounded-4 shadow-sm">
+          <div class="icon mb-3">
+            <i class="bi bi-chat-dots text-success fs-2"></i>
+          </div>
+          <h3 class="fw-bold mb-1">47</h3>
+          <p class="text-muted mb-0">IIM Admissions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Brands Section -->
+
+<section id="brands" class="py-5 text-center bg-light">
+  <div class="container">
+    <h2 class="fw-bold mb-5">Our Brands</h2>
+    <div class="row justify-content-center align-items-center g-4">
+      <div class="col-6 col-md-2">
+        <img src="images/legaledge.png" alt="LegalEdge" class="brand-logo img-fluid">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="images/supergrads.png" alt="SuperGrads" class="brand-logo img-fluid">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="images/judiciarygold.png" alt="JudiciaryGold" class="brand-logo img-fluid">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="images/creativeedge.png" alt="CreativeEdge" class="brand-logo img-fluid">
+      </div>
+      <div class="col-6 col-md-2">
+        <img src="images/aftercollege.png" alt="AfterCollege" class="brand-logo img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Better Section -->
+<section id="better" class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100">
+          <img src="images/teacher.png" alt="Better Teachers" class="icon mb-3">
+          <h4 class="fw-bold">Better Teachers</h4>
+          <p class="text-muted">
+            Expert, empathetic teachers deliver quality content in live, interactive classes with a 4.7+ average review.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100">
+          <img src="images/learning.png" alt="Better Learning" class="icon mb-3">
+          <h4 class="fw-bold">Better Learning</h4>
+          <p class="text-muted">
+            The 360° Prep Engine boosts student performance with regular classes, frequent tests, personalized feedback, and mentoring.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100">
+          <img src="images/results.png" alt="Better Results" class="icon mb-3">
+          <h4 class="fw-bold">Better Results</h4>
+          <p class="text-muted">
+            High success ratios guarantee better results. Proud of quality outcomes and top-notch admission offers for our students.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      
+      <!-- Left Content -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="fw-bold mb-3">
+          About <span class="text-warning">ThinkPlus</span>
+        </h2>
+        <p class="text-muted mb-4">
+          At ThinkPlus, we combine expert mentorship, data-driven feedback, and modern teaching methods 
+          to help students achieve their academic dreams. Our mission is to make top careers accessible 
+          and achievable for every aspirant across India.
+        </p>
+
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+            Live interactive classes
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+            Personalized feedback & performance tracking
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-warning me-2"></i>
+            Industry mentors & placement support
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Card -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="about-card bg-white shadow-lg rounded-4 p-4 text-center">
+          <h5 class="fw-bold mb-3 text-dark">Meet Our Founders</h5>
+          <div class="founders d-flex flex-column flex-md-row justify-content-center gap-4">
+            
+            <!-- Founder 1 -->
+            <div class="founder text-center">
+              <img src="images/founder1.jpg" alt="Amit Verma" class="rounded-circle mb-2" width="90" height="90">
+              <h6 class="fw-bold mb-0">Amit Verma</h6>
+              <small class="text-muted">Co-founder & Mentor</small>
+            </div>
+
+            <!-- Founder 2 -->
+            <div class="founder text-center">
+              <img src="images/founder2.jpg" alt="Sneha Rao" class="rounded-circle mb-2" width="90" height="90">
+              <h6 class="fw-bold mb-0">Sneha Rao</h6>
+              <small class="text-muted">Operations Head</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimonials -->
+<section id="testimonials" class="py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">
+      What students have to say about <span class="text-warning">THINKPLUS:</span>
+    </h2>
+
+    <div class="testimonial-wrapper">
+      <div class="testimonial-track">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card bg-dark text-white p-4 rounded-4 mx-3">
+          <p class="testimonial-text">
+            “The faculty members are not only incredibly knowledgeable but also exceptionally supportive and encouraging, making the learning process truly enjoyable.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/student1.png" class="rounded-circle me-3" alt="Bhanu" width="50" height="50">
+            <div class="text-start">
+              <h6 class="mb-0 fw-bold">Bhanu Sanjana Nadella</h6>
+              <small class="text-muted">IPM, IIM Rohtak</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-dark text-white p-4 rounded-4 mx-3">
+          <p class="testimonial-text">
+            “The guidance by all the teachers, the support, and one-on-one mentoring sessions helped me analyze my strengths and weaknesses. Thinkplus truly shaped my preparation.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/student2.png" class="rounded-circle me-3" alt="Vaishnavi" width="50" height="50">
+            <div class="text-start">
+              <h6 class="mb-0 fw-bold">M. Vaishnavi</h6>
+              <small class="text-muted">IPM, IIM Bodh Gaya</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-dark text-white p-4 rounded-4 mx-3">
+          <p class="testimonial-text">
+            “Exceptional mentors not only taught fundamentals but also instilled problem-solving approaches. Weekly quizzes and revision sessions built my confidence before exams.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/student3.png" class="rounded-circle me-3" alt="Sahithi" width="50" height="50">
+            <div class="text-start">
+              <h6 class="mb-0 fw-bold">Sahithi Chaganti</h6>
+              <small class="text-muted">MBA, IIM Udaipur</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate slides for infinite effect -->
+        <div class="testimonial-card bg-dark text-white p-4 rounded-4 mx-3">
+          <p class="testimonial-text">
+            “The teachers here guide you at every step. Their constant motivation and mentorship make the journey toward success much easier.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/student4.png" class="rounded-circle me-3" alt="Rahul" width="50" height="50">
+            <div class="text-start">
+              <h6 class="mb-0 fw-bold">Rahul Mehta</h6>
+              <small class="text-muted">CAT 99.2 Percentile</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat duplicates for seamless infinite scroll -->
+        <div class="testimonial-card bg-dark text-white p-4 rounded-4 mx-3">
+          <p class="testimonial-text">
+            “The faculty members are not only incredibly knowledgeable but also exceptionally supportive and encouraging, making the learning process truly enjoyable.”
+          </p>
+          <div class="d-flex align-items-center mt-4">
+            <img src="images/student1.jpg" class="rounded-circle me-3" alt="Bhanu" width="50" height="50">
+            <div class="text-start">
+              <h6 class="mb-0 fw-bold">Bhanu Sanjana Nadella</h6>
+              <small class="text-muted">IPM, IIM Rohtak</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Gallery Section -->
+
+<section id="gallery" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Our <span class="text-warning">Gallery</span></h2>
+    <p class="text-muted mb-5">A glimpse into our vibrant campus life and learning environment</p>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4">
+      <!-- Seminar -->
+      <div class="col-6 col-md-3">
+        <div class="gallery-item rounded-4 overflow-hidden shadow-sm">
+          <img src="images/seminar.png" class="img-fluid gallery-img" alt="Seminar">
+          <div class="gallery-overlay">
+            <h5 class="text-white fw-bold">Seminar</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infrastructure -->
+      <div class="col-6 col-md-3">
+        <div class="gallery-item rounded-4 overflow-hidden shadow-sm">
+          <img src="images/infrastructure.png" class="img-fluid gallery-img" alt="Infrastructure">
+          <div class="gallery-overlay">
+            <h5 class="text-white fw-bold">Infrastructure</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activities -->
+      <div class="col-6 col-md-3">
+        <div class="gallery-item rounded-4 overflow-hidden shadow-sm">
+          <img src="images/activities.png" class="img-fluid gallery-img" alt="Activities">
+          <div class="gallery-overlay">
+            <h5 class="text-white fw-bold">Activities</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classes -->
+      <div class="col-6 col-md-3">
+        <div class="gallery-item rounded-4 overflow-hidden shadow-sm">
+          <img src="images/classes.png" class="img-fluid gallery-img" alt="Classes">
+          <div class="gallery-overlay">
+            <h5 class="text-white fw-bold">Classes</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold text-warning">ThinkPlus</h5>
+          <p>Empowering aspirants with high-quality mentorship and test-prep resources.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Contact</h6>
+          <p><i class="fa fa-phone"></i> +91 12345 67890</p>
+          <p><i class="fa fa-envelope"></i> hello@thinkpluseducation.com</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3">Quick Enquiry</h6>
+          <form id="contactForm">
+            <input type="text" class="form-control mb-2" placeholder="Name" required>
+            <input type="email" class="form-control mb-2" placeholder="Email" required>
+            <textarea class="form-control mb-2" rows="3" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-warning w-100">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <small>© <span id="year"></span> ThinkPlus Education. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent.');
+      e.target.reset();
+    });
+
+
+     const scrollContainer = document.querySelector('.services-scroll');
+  const leftBtn = document.querySelector('.left-btn');
+  const rightBtn = document.querySelector('.right-btn');
+
+  rightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  leftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+
+
+  const track = document.querySelector('.testimonial-track');
+track.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+track.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
+  </script>
+</body>
+</html>
